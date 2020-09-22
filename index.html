@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const sound = new Audio("./spook-central.wav");
+      const sound1 = new Audio("./slimedme.wav");
+      const sound2 = new Audio("./mucus.wav");
+      const sound3 = new Audio(
+        "./let's-see-what-happens-when-we-take-away-the-puppy.wav"
+      );
+      const sound4 = new Audio(
+        "./vigie-vigie-vigie-you-have-been-a-bad-monkey.wav"
+      );
+      const sound5 = new Audio("./as-i-explained-before.wav");
+    </script>
+    <style>
+      @font-face {
+        font-family: GHOSTBUS;
+        src: url(GHOSTBUS.TTF);
+      }
+
+      body {
+        background-image: url("vigo.png");
+        background-color: #000000;
+      }
+
+      .header {
+        color: #ffffff;
+        text-align: center;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        font-family: GHOSTBUS;
+        font-size: 50px;
+      }
+
+      .soundboard-container {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-content: space-around;
+        grid-gap: 10px;
+        padding: 50px;
+        margin: 75px;
+        border: hidden;
+      }
+      .btn {
+        font-size: 24px;
+        font-family: GHOSTBUS;
+        color: #000000;
+        background-color: #fafafa;
+        border-radius: 2px;
+        border: 1px solid #000000;
+        padding: 5px;
+        cursor: pointer;
+        transition: background-color 600ms ease;
+      }
+
+      .btn:hover {
+        background-color: #72c452;
+        cursor: pointer;
+      }
+
+      .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .item2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+      .item5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+      }
+      .item6 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 4;
+      }
+
+      .footer {
+        text-align: center;
+        width: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div header>
+      <h1 class="header">
+        <p>Ghostbusters soundboard</p>
+      </h1>
+    </div>
+    <div soundboard class="soundboard-container">
+      <button class="btn item1" onclick="sound.play()">SPOoK CENTRAL</button>
+      <button class="btn item2" onclick="sound1.play()">HE SLIMED ME</button>
+      <button class="btn item3" onclick="sound2.play()">
+        EGoN, YOUR MUCUS
+      </button>
+      <button class="btn item4" onclick="sound3.play()">WHAT HAPPENS?</button>
+      <button class="btn item5" onclick="sound4.play()">
+        VIGIE, VIGIE, VIGIE
+      </button>
+      <button class="btn item6" onclick="sound5.play()">
+        AS I EXPLAINED BEFORE
+      </button>
+    </div>
+    <div footer class="footer"></div>
+  </body>
+</html>
